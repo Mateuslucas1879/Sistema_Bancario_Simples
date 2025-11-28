@@ -32,7 +32,7 @@ class ContaCorrente(Conta):
 
 
 
-class ContaPoupanca:
+class ContaPoupanca(Conta):
     def aplicar_rendimento(self,taxa):
         if taxa <= 0:
             return False
@@ -40,7 +40,7 @@ class ContaPoupanca:
         self.saldo += rendimento
         return True
 
-class ContaSalario:
+class ContaSalario(Conta):
     def __init__(self,numero,cliente,saldo_inicial=0):
         super().__init__(numero,cliente,saldo_inicial)
 
